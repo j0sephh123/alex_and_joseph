@@ -1,5 +1,5 @@
 ---
-title: second
-symbol: secondd
+title: Cardano
+symbol: ADA
 ---
 home2 page

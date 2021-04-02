@@ -1,37 +1,43 @@
 import dynamic from 'next/dynamic';
-import axios from 'axios';
 
-const loadConfig = (contentsList) => {
-	return {
-		cms_manual_init: true,
-		backend: {
-			name: 'github',
-			repo: 'j0sephh123/alex_and_joseph',
-			branch: 'main',
+const config = {
+	cms_manual_init: true,
+	backend: {
+		name: 'github',
+		repo: 'j0sephh123/alex_and_joseph',
+		branch: 'main',
+	},
+	media_folder: 'public/img',
+	public_folder: 'img',
+	collections: [
+		{
+			label: 'tokens',
+			name: 'tokens',
+			folder: "_content",
+			create: true,
+			fields: [
+				{
+					name: 'title',
+					label: 'Title',
+					widget: 'string',
+				},
+				{
+					name: 'symbol',
+					label: 'Symbol',
+					widget: 'string',
+				},
+			]
 		},
-		media_folder: 'public/img',
-		public_folder: 'img',
-		collections: [
-			{
-				label: 'tokens',
-				name: 'tokens',
-				files: [...contentsList],
-			},
-		],
-	}
+	],
 }
 
 const CMS = dynamic(
 	() =>
-		import('netlify-cms-app').then(async (cms) => {
-			const {data: {contentsList}} = await axios.get(`${window.location.origin}/api/hello`)
-			cms.init({config: {...loadConfig(contentsList)}});
+		import('netlify-cms-app').then(cms => {
+			cms.init({ config });
 		}),
 	{ssr: false, loading: () => <p>Loading...</p>}
 );
 
-const AdminPage = () => {
-	console.log('admin page')
-	return <CMS something={1}/>
-}
+const AdminPage = () => <CMS/>
 export default AdminPage

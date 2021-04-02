@@ -1,4 +1,4 @@
 ---
+title: ADAname
 symbol: qweqweasdaxzc
-name: home1name
 ---

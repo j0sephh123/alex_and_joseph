@@ -13,20 +13,42 @@ const config = {
 		{
 			label: 'tokens',
 			name: 'tokens',
-			folder: "_content",
-			create: true,
-			fields: [
+			files: [
 				{
-					name: 'title',
-					label: 'Title',
-					widget: 'string',
+					label: 'ADA',
+					name: 'ADA',
+					file: 'content/ADA.md',
+					fields: [
+						{
+							label: 'title',
+							name: 'title',
+							widget: 'string',
+						},
+						{
+							label: 'symbol',
+							name: 'symbol',
+							widget: 'string',
+						},
+					],
 				},
 				{
-					name: 'symbol',
-					label: 'Symbol',
-					widget: 'string',
+					label: 'BTC',
+					name: 'BTC',
+					file: 'content/pages/BTC.md',
+					fields: [
+						{
+							label: 'title',
+							name: 'title',
+							widget: 'string',
+						},
+						{
+							label: 'symbol',
+							name: 'symbol',
+							widget: 'string',
+						},
+					],
 				},
-			]
+			],
 		},
 	],
 }

@@ -7,7 +7,7 @@
 - Connect to some cms
 
 # Used resources
-[Vercel](https://vercel.com)
-[React](https://reactjs.org/)
-[Nextjs](https://nextjs.org/)
-[Sass](https://sass-lang.com/)
+[Vercel](https://vercel.com) - currently prefer it over netlify, although the last one is still ok  
+[React](https://reactjs.org/) - atm de facto FE lib  
+[Nextjs](https://nextjs.org/) - atm de facto React Fw  
+[Sass](https://sass-lang.com/) - easiest to write?  

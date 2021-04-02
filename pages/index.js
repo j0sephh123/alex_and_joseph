@@ -7,7 +7,7 @@ export default function Index({
   return (
     <div>
       Jello world -> HEllo world1
-      {tokens.map(({data}) => <div>{data.title}</div>)}
+      {tokens.map(({data}) => <div key={data.title}>{data.title}</div>)}
     </div>
   )
 }

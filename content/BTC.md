@@ -1,4 +1,4 @@
 ---
-title: ADAname
-symbol: qweqweasdaxzc
+title: Bitcoin
+symbol: BTC
 ---

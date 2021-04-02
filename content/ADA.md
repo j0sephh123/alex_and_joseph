@@ -1,5 +1,5 @@
 ---
-title: chome2name
-symbol: Awesome kitties2
+title: second
+symbol: secondd
 ---
 home2 page
